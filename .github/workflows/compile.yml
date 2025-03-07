@@ -1,6 +1,10 @@
 name: C/C++ CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      parameter:
+        description: #My Parameter
   push:
       branches: [ main ]
   pull_request:
