@@ -15,9 +15,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Install xmllint
-        run: sudo apt update 
-        run: sudo apt install -y libc6
-        run: sudo apt install -y libstdc++6
+        run: |
+        sudo apt update 
+        sudo apt install -y libc6
+        sudo apt install -y libstdc++6
       - name: configure
         run: ./configure
       - name: make
