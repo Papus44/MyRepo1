@@ -12,7 +12,7 @@ on:
 
 jobs:
   get_info:
-      runs-on: darro 
+      runs-on: self-hosted
       steps:
       - name: get_info
         run: cat /etc/os-release
