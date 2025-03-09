@@ -11,6 +11,11 @@ on:
       branches: [ main ]
 
 jobs:
+  get_info:
+      runs-on: ubuntu-latest
+      steps:
+      - name: get_info
+        run: cat /etc/os-release
   build-and-test:
       runs-on: ubuntu-latest
       steps:
