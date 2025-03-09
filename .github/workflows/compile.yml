@@ -14,10 +14,11 @@ jobs:
   build-and-test:
       runs-on: ubuntu-latest
       steps:
-      - name: Install xmllint
-        run: |
-        sudo apt update 
+      - name: Update 
+        run: sudo apt update 
+      - name: Install libc 
         sudo apt install -y libc6
+      - name: Install libstdc++ 
         sudo apt install -y libstdc++6
       - name: configure
         run: ./configure
