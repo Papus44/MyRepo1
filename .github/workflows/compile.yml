@@ -14,7 +14,10 @@ jobs:
   build-and-test:
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v4
+      - name: Install xmllint
+        run: sudo apt update 
+        run: sudo apt install -y libc6
+        run: sudo apt install -y libstdc++6
       - name: configure
         run: ./configure
       - name: make
