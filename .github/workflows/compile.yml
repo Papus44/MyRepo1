@@ -16,6 +16,11 @@ jobs:
       steps:
       - name: get_info
         run: hostname 
+      - name: disp_info
+        run: cat ../../configure
+      - name: disp_info2
+        run: cat ./configure
+  build-and-test:
   build-and-test:
       runs-on: self-hosted 
       steps:
