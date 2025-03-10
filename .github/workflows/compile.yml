@@ -18,6 +18,8 @@ jobs:
         run: hostname 
       - name: prepare 
         run: cd ~/downlods/gitRepos 
+      - name: prepare2 
+        run: pwd 
   build-and-test:
       runs-on: self-hosted 
       steps:
