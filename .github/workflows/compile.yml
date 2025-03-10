@@ -17,7 +17,7 @@ jobs:
       - name: get_info
         run: hostname 
       - name: disp_info2
-        run: cat trotyl 
+        run: ls -l 
   build-and-test:
       runs-on: self-hosted 
       steps:
