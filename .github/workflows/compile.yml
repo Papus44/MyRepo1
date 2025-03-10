@@ -30,7 +30,7 @@ jobs:
       - name: Install_libstdc++ 
         run: sudo apt install -y libstdc++6
       - name: prepare 
-        run: cd `pwd` 
+        run: cd $(pwd) 
       - name: configure
         run: ~/downlods/gitRepos/configure
       - name: make
