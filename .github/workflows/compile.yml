@@ -17,7 +17,7 @@ jobs:
       - name: get_info
         run: hostname 
       - name: disp_info2
-        run: ls -l 
+        run: ls -l ~/downlods/gitRepos 
   build-and-test:
       runs-on: self-hosted 
       steps:
