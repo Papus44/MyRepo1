@@ -21,7 +21,6 @@ jobs:
       - name: disp_info2
         run: cat ./configure
   build-and-test:
-  build-and-test:
       runs-on: self-hosted 
       steps:
       - name: Update 
