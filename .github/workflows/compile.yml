@@ -15,9 +15,9 @@ jobs:
       runs-on: self-hosted
       steps:
       - name: get_info
-        run: cat /etc/os-release
+        run: hostname 
   build-and-test:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted 
       steps:
       - name: Update 
         run: sudo apt update 
