@@ -26,6 +26,8 @@ jobs:
         run: cd $GITHUB_WORKSPACE
       - name: prepare5
         run: pwd
+      - name: prepare6
+        run: ls -l 
   build-and-test:
       runs-on: self-hosted
       steps:
