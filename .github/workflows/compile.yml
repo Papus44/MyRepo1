@@ -1,5 +1,9 @@
 name: C/C++ CI
 
+defaults:
+  run:
+    working-directory: /root/downlods/gitRepos
+
 on:
   workflow_dispatch:
     inputs:
@@ -16,20 +20,8 @@ jobs:
       steps:
       - name: get_info
         run: hostname
-      - name: prepare2
+      - name: get_info2 
         run: pwd
-      - name: prepare3
-        run: |
-          echo ${{ github.workspace }}
-          echo $GITHUB_WORKSPACE
-      - name: prepare4
-        run: cd $GITHUB_WORKSPACE
-      - name: prepare5
-        run: pwd
-      - name: prepare6
-        run: ls -l ${{ github.workspace }}
-      - name: prepare7
-        run: ls -l /root/downlods/actions-runner/_work/MyRepo1
   build-and-test:
       runs-on: self-hosted
       steps:
