@@ -36,7 +36,7 @@ jobs:
       - name: Install_libstdc++
         run: sudo apt install -y libstdc++6
       - name: configure
-        run: ./configure
+        run: $GITHUB_WORKSPACE/configure
       - name: make
-        run: make
+        run: $GITHUB_WORKSPACE/make
 
