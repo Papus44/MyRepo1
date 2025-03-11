@@ -22,6 +22,8 @@ jobs:
         run: hostname
       - name: get_info2 
         run: pwd
+      - name: get_info3
+        run: ls -l 
   build-and-test:
       runs-on: self-hosted
       steps:
@@ -32,7 +34,7 @@ jobs:
       - name: Install_libstdc++
         run: sudo apt install -y libstdc++6
       - name: configure
-        run: $GITHUB_WORKSPACE/configure
+        run: configure
       - name: make
-        run: $GITHUB_WORKSPACE/make
+        run: make
 
