@@ -15,28 +15,22 @@ jobs:
       runs-on: self-hosted
       steps:
       - name: get_info
-        run: hostname 
-      - name: prepare 
-        run: cd ~/downlods/gitRepos 
-      - name: prepare2 
-        run: pwd 
+        run: hostname
+      - name: prepare
+        run: cd ~/downlods/gitRepos
+      - name: prepare2
+        run: pwd
+      - name: prepare3
+        run: |
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
   build-and-test:
-      runs-on: self-hosted 
+      runs-on: self-hosted
       steps:
-      - name: Update 
-        run: sudo apt update 
-      - name: Install_libc 
+      - name: Update
+        run: sudo apt update
+      - name: Install_libc
         run: sudo apt install -y libc6
-      - name: Install_libstdc++ 
+      - name: Install_libstdc++
         run: sudo apt install -y libstdc++6
-      - name: prepare 
-        run: cd $(pwd) 
-      - name: configure
-        run: ~/downlods/gitRepos/configure
-      - name: make
-        run: ~/downlods/gitRepos/make
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: compiled executable
-          path: hello
+
