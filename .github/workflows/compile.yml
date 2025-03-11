@@ -27,7 +27,7 @@ jobs:
       - name: prepare5
         run: pwd
       - name: prepare6
-        run: ls -l $GITHUB_WORKSPACE 
+        run: ls -l ${{ github.workspace }}
   build-and-test:
       runs-on: self-hosted
       steps:
