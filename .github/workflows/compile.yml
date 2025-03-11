@@ -43,5 +43,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled executable
-          path: /root/downlods/gitRepo/hello
+          path: /root/downlods/gitRepos/hello
 
